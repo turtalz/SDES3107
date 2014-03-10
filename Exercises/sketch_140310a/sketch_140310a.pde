@@ -63,15 +63,6 @@ fill(255);
 noStroke();
 rect(0, 0, 1200, 120);
 
-//midground horizontal lines
-stroke(245);
-strokeWeight(4);
-line(0, 590, 1200, 590);
-
-stroke(230);
-strokeWeight(2);
-line(0, 595, 1200, 595);
-
 
 
 //foreground icon
@@ -81,15 +72,26 @@ ellipse(100, 60, 80, 80);
 fill(255);
 ellipse(100, 60, 65, 65);
 
-
-
-
+// foreground side bar lines
 for (int y = 150; y < 650; y += 50) {
-stroke(80, 240, 170);
+stroke(280, 180, 150);
 strokeWeight(2);
-  line(0, y, 200, y+5);
+  line(0, y, 200, y+50);
 }
 
+//foreground horizontal lines
+stroke(245);
+strokeWeight(4);
+line(0, 590, 1200, 590);
 
+stroke(230);
+strokeWeight(2);
+line(0, 595, 1200, 595);
+
+//foreground image
+PImage myImage1;
+myImage1 = loadImage("chyme logo.png");
+tint(250);
+image(myImage1, 480, 200, 350, 300);
 
 
